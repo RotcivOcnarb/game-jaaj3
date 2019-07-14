@@ -7,6 +7,7 @@ public class MoveFight : MonoBehaviour
     Rigidbody2D body;
     public Collider2D chao;
     Animator animator;
+    public static bool canTransitionOut;
 
     CircleCollider2D circleHand;
 
@@ -64,9 +65,9 @@ public class MoveFight : MonoBehaviour
         animator.SetBool("Jump", !body.IsTouching(chao));
 
         if(maoNoCara && animator.GetBool("Punch")){
-            Debug.Log("BATEU NO PARSÇA");
             enemyObject.SetActive(false);
             animator.SetBool("SePegando", true);
+            canTransitionOut = true;
         }
 
     }

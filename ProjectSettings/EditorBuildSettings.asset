@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/CharacterSelection.unity
     guid: da6a622fd41b0c74da119d75a111115b
   - enabled: 1
+    path: Assets/Scenes/TransitionTVScene.unity
+    guid: f31a7cdee1126224b94074a6778b4c84
+  - enabled: 1
     path: Assets/Scenes/Fighty.unity
     guid: 1952b696a3b794245a36d8ba3723daf0
+  - enabled: 1
+    path: Assets/Scenes/Banho 1.unity
+    guid: 1227024f738b3c44888450adbdc73888
   m_configObjects: {}
