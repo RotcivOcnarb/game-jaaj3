@@ -18,6 +18,7 @@ public class CharacterSelectionOutro : MonoBehaviour
     void Update()
     {   
         alpha += (0 - alpha) / 15f;
+        if(flash != null)
         flash.color = new Color(1, 1, 1, alpha);
     }
 

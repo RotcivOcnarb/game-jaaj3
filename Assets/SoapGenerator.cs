@@ -7,7 +7,7 @@ public class SoapGenerator : MonoBehaviour
 
     public GameObject soapPrefab;
     public MaoBanho maoBanho;
-
+    int bolhas = 0;
     float timer;
     public float delay = .5f;
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class SoapGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButton(0) && maoBanho.holdingSoap){
+        if(Input.GetMouseButton(0) && maoBanho.holdingSoap && bolhas <= 50){
 
             Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -32,6 +32,7 @@ public class SoapGenerator : MonoBehaviour
                     GameObject go = Instantiate(soapPrefab, mouseWorld, soapPrefab.transform.rotation);
                     go.transform.SetParent(transform, false);
                     go.transform.position = mouseWorld;
+                    bolhas++; 
                 }
             }
 

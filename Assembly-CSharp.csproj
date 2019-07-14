@@ -64,9 +64,11 @@
      <Compile Include="Assets\MeuNegocio.cs" />
      <Compile Include="Assets\MoveFight.cs" />
      <Compile Include="Assets\MusicPreventCut.cs" />
+     <Compile Include="Assets\ResCanv.cs" />
      <Compile Include="Assets\SabaoClickUI.cs" />
      <Compile Include="Assets\SelectionCharacter.cs" />
      <Compile Include="Assets\SoapGenerator.cs" />
+     <Compile Include="Assets\TimerContador.cs" />
      <Compile Include="Assets\TitleAudioStarter.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>E:/unity/Game Jaaj 3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
