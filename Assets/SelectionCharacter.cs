@@ -43,16 +43,23 @@ public class SelectionCharacter : MonoBehaviour
 
         posTween += (selectedPos - posTween) / 2f;
 
+        bigImage.transform.localPosition = bigImage.transform.localPosition +
+            (new Vector3(0, 0, 1) - bigImage.transform.localPosition)/5f;
+
         if(!animator.GetBool("Outro")){
             if(Input.GetKeyDown(KeyCode.UpArrow)){
                 if(selectedPos == localPos3){
                     selectedPos = localPos1;
                     bigImage.sprite = marcelo.sprite;
+                    bigImage.color = marcelo.color;
+                    bigImage.transform.localPosition = new Vector3(0, -5, 1);
                 }
 
                 if(selectedPos == localPos4){
                     selectedPos = localPos2;
                     bigImage.sprite = luisMauricio.sprite;
+                    bigImage.color = luisMauricio.color;
+                    bigImage.transform.localPosition = new Vector3(0, -5, 1);
                 }
             }
 
@@ -60,11 +67,15 @@ public class SelectionCharacter : MonoBehaviour
                 if(selectedPos == localPos1){
                     selectedPos = localPos3;
                     bigImage.sprite = takaroNomuro.sprite;
+                    bigImage.color = takaroNomuro.color;
+                    bigImage.transform.localPosition = new Vector3(0, -5, 1);
                 }
 
                 if(selectedPos == localPos2){
                     selectedPos = localPos4;
                     bigImage.sprite = mikoMeu.sprite;
+                    bigImage.color = mikoMeu.color;
+                    bigImage.transform.localPosition = new Vector3(0, -5, 1);
                 }
             }
 
@@ -72,22 +83,30 @@ public class SelectionCharacter : MonoBehaviour
                 if(selectedPos == localPos2){
                     selectedPos = localPos1;
                     bigImage.sprite = marcelo.sprite;
+                    bigImage.color = marcelo.color;
+                    bigImage.transform.localPosition = new Vector3(0, -5, 1);
                 }
 
                 if(selectedPos == localPos4){
                     selectedPos = localPos3;
                     bigImage.sprite = takaroNomuro.sprite;
+                    bigImage.color = takaroNomuro.color;
+                    bigImage.transform.localPosition = new Vector3(0, -5, 1);
                 }
             }
             if(Input.GetKeyDown(KeyCode.RightArrow)){
                 if(selectedPos == localPos1){
                     selectedPos = localPos2;
                     bigImage.sprite = luisMauricio.sprite;
+                    bigImage.color = luisMauricio.color;
+                    bigImage.transform.localPosition = new Vector3(0, -5, 1);
                 }
 
                 if(selectedPos == localPos3){
                     selectedPos = localPos4;
                     bigImage.sprite = mikoMeu.sprite;
+                    bigImage.color = mikoMeu.color;
+                    bigImage.transform.localPosition = new Vector3(0, -5, 1);
                 }
             }
         }

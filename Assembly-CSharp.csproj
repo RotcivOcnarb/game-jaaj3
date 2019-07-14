@@ -54,12 +54,20 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CharacterSelectionOutro.cs" />
+     <Compile Include="Assets\ChuvaGenerator.cs" />
+     <Compile Include="Assets\ColisaoCaraleo.cs" />
      <Compile Include="Assets\CutsceneIntro.cs" />
      <Compile Include="Assets\EnemyMov.cs" />
+     <Compile Include="Assets\GotaDeleter.cs" />
      <Compile Include="Assets\LogoMovimentacao.cs" />
+     <Compile Include="Assets\MaoBanho.cs" />
      <Compile Include="Assets\MeuNegocio.cs" />
      <Compile Include="Assets\MoveFight.cs" />
+     <Compile Include="Assets\MusicPreventCut.cs" />
+     <Compile Include="Assets\SabaoClickUI.cs" />
      <Compile Include="Assets\SelectionCharacter.cs" />
+     <Compile Include="Assets\SoapGenerator.cs" />
+     <Compile Include="Assets\TitleAudioStarter.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>E:/unity/Game Jaaj 3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

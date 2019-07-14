@@ -17,7 +17,7 @@ public class CharacterSelectionOutro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        alpha += (0 - alpha) / 5f;
+        alpha += (0 - alpha) / 15f;
         flash.color = new Color(1, 1, 1, alpha);
     }
 
