@@ -20,9 +20,11 @@ public class NoiseAnimation : MonoBehaviour
         
     }
 
+    int sceneIndex = 3;
     public void SetNoiseOff(){
         animator.SetBool("NoiseOn", false);
-        SceneManager.UnloadSceneAsync(3);
-        SceneManager.LoadScene(4, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync(sceneIndex);
+        SceneManager.LoadScene(sceneIndex+1, LoadSceneMode.Additive);
+        sceneIndex++;
     }
 }

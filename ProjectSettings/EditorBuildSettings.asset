@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Banho 1.unity
     guid: 1227024f738b3c44888450adbdc73888
+  - enabled: 1
+    path: Assets/Scenes/SalaDeLava.unity
+    guid: ca69875812e9f174798d013d5f66d337
   m_configObjects: {}

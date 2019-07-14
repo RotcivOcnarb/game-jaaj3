@@ -24,8 +24,28 @@ public class TransitionScript : MonoBehaviour
         animator.SetBool("ZoomOut", MoveFight.canTransitionOut);
 
         if(MoveFight.canTransitionOut){
+            MoveFight.canTransitionOut = false;
             sombraAnimator.SetInteger("SombraState", 1);
-            controleAnimator.SetBool("ChangeChannel", true);
+            controleAnimator.SetTrigger("ChangeChannel");
+            Debug.Log("ai chaves");
         }
+
+        if(SoapGenerator.banhoFinished){
+            SoapGenerator.banhoFinished = false;
+            animator.SetTrigger("ZoomLava");
+            controleAnimator.SetTrigger("ChangeChannel");
+            Debug.Log("Triggerando loja");
+        }
+    }
+
+    public void ZoomInEnd(){
+
+        /*
+        GameObject camgo = GameObject.FindGameObjectWithTag("CameraQueEuQuero");
+        if(camgo){
+            Camera.main.enabled = false;
+            camgo.GetComponent<Camera>().enabled = true;
+        }
+        */
     }
 }

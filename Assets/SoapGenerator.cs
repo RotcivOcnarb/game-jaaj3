@@ -7,47 +7,47 @@ public class SoapGenerator : MonoBehaviour
 
     public GameObject soapPrefab;
     public MaoBanho maoBanho;
-    public Rect aaaa;
+    RectTransform area;
+    public Camera myCam;
+    public Camera renderCam;
+    public static bool banhoFinished;
     int bolhas = 0;
     float timer;
     public float delay = .5f;
     // Start is called before the first frame update
     void Start()
     {
-        aaaa = GetComponent<Rect>();
-
+        area = GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePosition = myCam.ScreenToWorldPoint(Input.mousePosition);
         float mpx = mousePosition.x;
         float mpy = mousePosition.y;
-        if (Input.GetMouseButton(0) && maoBanho.holdingSoap && bolhas <= 50 && mpx > aaaa.x - 1000 && mpx < aaaa.x  && mpy > aaaa.y - 650 && mpy < aaaa.y + 100)
+
+        Vector3[] corners = new Vector3[4];
+        area.GetWorldCorners(corners);
+
+        Rect reer = new Rect(corners[0].x, corners[0].y, corners[2].x - corners[0].x, corners[2].y - corners[0].y);
+
+        if (Input.GetMouseButton(0) && maoBanho.holdingSoap && bolhas <= 50 && reer.Contains(new Vector2(mpx, mpy)))
         {
+            timer += Time.deltaTime;
+            if(timer > delay){
+                timer -= delay;
 
-            Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            if(GetComponent<RectTransform>().rect.Contains(mouseWorld))
-            {
-                timer += Time.deltaTime;
-
-                if(timer > delay){
-                    timer -= delay;
-
-                    GameObject go = Instantiate(soapPrefab, mouseWorld, soapPrefab.transform.rotation);
-                    go.transform.SetParent(transform, false);
-                    go.transform.position = mouseWorld;
-                    bolhas++; 
-                }
-
+                GameObject go = Instantiate(soapPrefab, mousePosition, soapPrefab.transform.rotation);
+                go.transform.SetParent(transform, false);
+                go.transform.localScale = go.transform.localScale * 1f;
+                go.transform.position = mousePosition;
+                bolhas++; 
             }
-
         }
         if (bolhas > 5)
         {
-            Animator cameraTransition = Camera.main.GetComponent<Animator>();
+            Animator cameraTransition = renderCam.gameObject.GetComponent<Animator>();
             cameraTransition.SetBool("Banho2", true);
         }
     }

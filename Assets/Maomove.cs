@@ -5,6 +5,7 @@ using UnityEngine;
 public class Maomove : MonoBehaviour
 {
     Rigidbody2D maoBody;
+    public Camera gameCam;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class Maomove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePosition = gameCam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mp = new Vector2(mousePosition.x, mousePosition.y);
 
         maoBody.AddForce(

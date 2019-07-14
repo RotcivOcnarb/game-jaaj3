@@ -11,6 +11,7 @@ public class MaoBanho : MonoBehaviour
     public Camera thiscamera;
     public GameObject sabaoNaMao;
 
+
     public bool holdingSoap;
 
     SpriteRenderer spriteRenderer;
@@ -43,7 +44,7 @@ public class MaoBanho : MonoBehaviour
                 sabaoNaMao.AddComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
                 sabaoNaMao.transform.parent.DetachChildren();
                 holdingSoap = false;
-                Animator nextAnim = Camera.main.GetComponent<Animator>();
+                Animator nextAnim = thiscamera.GetComponent<Animator>();
                 nextAnim.SetBool("Banho2", true);
             }
         }

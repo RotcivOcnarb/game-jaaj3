@@ -51,6 +51,9 @@ public class PersonagemGarotinha : MonoBehaviour
         if (body.IsTouching(chaos[3]))
         {
             vivo = false;
+            Animator Lustre = GetComponent<Animator>();
+            Lustre.SetBool("Morreu",true);
+            Debug.Log("Yay, era pra rodar a anim do candelabro");
         }
         for(int i = 0; i < chaos.Length; i ++){
             if(body.IsTouching(chaos[i])){

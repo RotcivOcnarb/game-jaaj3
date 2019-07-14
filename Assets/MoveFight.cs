@@ -68,6 +68,7 @@ public class MoveFight : MonoBehaviour
             enemyObject.SetActive(false);
             animator.SetBool("SePegando", true);
             canTransitionOut = true;
+            animator.SetBool("Punch", false);
         }
 
     }
