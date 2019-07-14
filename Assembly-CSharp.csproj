@@ -63,9 +63,11 @@
      <Compile Include="Assets\LogoMovimentacao.cs" />
      <Compile Include="Assets\MaoBanho.cs" />
      <Compile Include="Assets\MeuNegocio.cs" />
+     <Compile Include="Assets\MovCand.cs" />
      <Compile Include="Assets\MoveFight.cs" />
      <Compile Include="Assets\MusicPreventCut.cs" />
      <Compile Include="Assets\NoiseAnimation.cs" />
+     <Compile Include="Assets\PersonagemGarotinha.cs" />
      <Compile Include="Assets\ResCanv.cs" />
      <Compile Include="Assets\SabaoClickUI.cs" />
      <Compile Include="Assets\SelectionCharacter.cs" />
