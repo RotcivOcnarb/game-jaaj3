@@ -23,7 +23,10 @@ public class ChuvaGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Animator cameraTransition = GetComponent<Animator>();
         fall = false;
+
+        cameraTransition.SetBool(0, true);
 
     }
 

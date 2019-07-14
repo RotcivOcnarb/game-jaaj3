@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MaoBanho : MonoBehaviour
 {
-
+    public Sprite cotovelo;
     public Sprite maoAberta;
     public Sprite maoFechada;
     public Camera thiscamera;
@@ -26,11 +27,11 @@ public class MaoBanho : MonoBehaviour
         
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
 
         
         spriteRenderer.sprite = Input.GetMouseButton(0) ? maoFechada : maoAberta;
-        spriteRenderer.size = new Vector2(transform.position.x*2 + 20, 5);
+        
+        //spriteRenderer.size = new Vector2(transform.position.x*2 + 20, 5);
 
         if(sabaoNaMao != null && sabaoNaMao.activeSelf && sabaoNaMao.transform.root == this.transform){
             holdingSoap = true;
@@ -42,6 +43,8 @@ public class MaoBanho : MonoBehaviour
                 sabaoNaMao.AddComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
                 sabaoNaMao.transform.parent.DetachChildren();
                 holdingSoap = false;
+                Animator nextAnim = Camera.main.GetComponent<Animator>();
+                nextAnim.SetBool("Banho2", true);
             }
         }
 
