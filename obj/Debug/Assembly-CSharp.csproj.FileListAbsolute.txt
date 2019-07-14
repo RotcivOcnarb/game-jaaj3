@@ -1,0 +1,2 @@
+C:\dev\GIT\game-jaaj3\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\dev\GIT\game-jaaj3\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
