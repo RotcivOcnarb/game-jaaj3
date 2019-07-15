@@ -15,6 +15,11 @@ public class ChuvaGenerator : MonoBehaviour
     public GameObject sabaoNaMao;
     public GameObject sabaoSaboneteira;
 
+    public RectTransform registroArea;
+    public GameObject pontaDaMao;
+
+    public Camera myCamera;
+
     public float delay;
     float timer = 0;
 
@@ -52,6 +57,23 @@ public class ChuvaGenerator : MonoBehaviour
 
             instancedGota.GetComponent<GotaDeleter>().deleterCollider = deleteGota;
 
+        }
+
+        Vector3[] registroCorners = new Vector3[4];
+
+        registroArea.GetWorldCorners(registroCorners);
+
+        Vector3 minA = registroCorners[0];
+        Vector3 maxA = registroCorners[2];
+
+        Rect r = new Rect(minA, maxA - minA);
+
+        if (r.Contains(pontaDaMao.transform.position)) {
+            Debug.Log("MouseEmCima do registro");
+            if (Input.GetMouseButtonDown(0)) {
+                Debug.Log("Mouse click registro");
+                RegistroClick();
+            }
         }
 
 
