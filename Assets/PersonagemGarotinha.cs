@@ -6,18 +6,25 @@ public class PersonagemGarotinha : MonoBehaviour
 {
     Rigidbody2D body;
     public Collider2D[] chaos;
+    Animator animator;
     bool vivo = true;
     // Start is called before the first frame update
-
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+    bool noChao = false;
+    for(int i = 0; i < chaos.Length; i ++){
+            if(body.IsTouching(chaos[i])){
+                noChao = true;
+                break;
+            }
+        }
         Camera.main.transform.position = Camera.main.transform.position + 
             (transform.position - Camera.main.transform.position) / 10f;
 
@@ -34,25 +41,21 @@ public class PersonagemGarotinha : MonoBehaviour
 
         Camera.main.transform.position = newPos;
 
-         if(Input.GetKey(KeyCode.RightArrow) && vivo)
+         if(Input.GetKey(KeyCode.RightArrow) && vivo && !noChao)
         {
             body.velocity = new Vector2(10, body.velocity.y);
         }
-        else if(Input.GetKey(KeyCode.LeftArrow) && vivo)
+        else if(Input.GetKey(KeyCode.LeftArrow) && vivo && !noChao)
         {
             body.velocity = new Vector2(-10, body.velocity.y);
         }
         else{
             body.velocity = new Vector2(body.velocity.x * 0.9f, body.velocity.y);
         }
-
-        bool noChao = false;
-
         if (body.IsTouching(chaos[3]))
         {
             vivo = false;
-            Animator Lustre = GetComponent<Animator>();
-            Lustre.SetBool("Morreu",true);
+            animator.SetBool("Morreu",true);
             Debug.Log("Yay, era pra rodar a anim do candelabro");
         }
         for(int i = 0; i < chaos.Length; i ++){
@@ -65,6 +68,14 @@ public class PersonagemGarotinha : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.UpArrow) && noChao && vivo)
         {
             body.AddForce(new Vector2(0,20),ForceMode2D.Impulse);
+        }
+        if(vivo && !noChao){
+            animator.SetBool("PuloBoneca",true);
+            Debug.Log("era pra pular, mas acho que não ta saindo");
+        }
+        else
+        {
+            animator.SetBool("PuloBoneca",false);
         }
     }
 }
