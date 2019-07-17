@@ -41,11 +41,11 @@ public class PersonagemGarotinha : MonoBehaviour
 
         Camera.main.transform.position = newPos;
 
-         if(Input.GetKey(KeyCode.RightArrow) && vivo && !noChao)
+         if(Input.GetKey(KeyCode.RightArrow) && vivo)
         {
             body.velocity = new Vector2(10, body.velocity.y);
         }
-        else if(Input.GetKey(KeyCode.LeftArrow) && vivo && !noChao)
+        else if(Input.GetKey(KeyCode.LeftArrow) && vivo)
         {
             body.velocity = new Vector2(-10, body.velocity.y);
         }
