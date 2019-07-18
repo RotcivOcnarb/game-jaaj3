@@ -122,10 +122,10 @@ GameObject:
   m_Component:
   - component: {fileID: 495909831}
   - component: {fileID: 495909830}
-  - component: {fileID: 495909829}
-  - component: {fileID: 495909828}
   - component: {fileID: 495909832}
   - component: {fileID: 495909833}
+  - component: {fileID: 495909829}
+  - component: {fileID: 495909828}
   m_Layer: 0
   m_Name: Personagem
   m_TagString: Untagged
@@ -167,8 +167,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.043033775}
-  m_Size: {x: 2.5752437, y: 7.689653}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.35, y: 7.97}
   m_Direction: 0
 --- !u!212 &495909830
 SpriteRenderer:
@@ -226,8 +226,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495909827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.41, y: -0.499, z: 0}
-  m_LocalScale: {x: 0.6405067, y: 0.6305377, z: 1.246122}
+  m_LocalPosition: {x: -5.887, y: 0.614, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children:
   - {fileID: 1999488372}
   m_Father: {fileID: 0}
@@ -690,7 +690,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 72c1e5f81a9ec7d4d9ede99b1d146dc5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1104,7 +1104,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 102
   m_Sprite: {fileID: 21300000, guid: 705408890a658134f83c89f56742b9a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1125,7 +1125,7 @@ Transform:
   m_GameObject: {fileID: 1999488370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 25, z: 0}
-  m_LocalScale: {x: 0.73223287, y: 0.74380964, z: 0.3763677}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 495909831}
   m_RootOrder: 0
