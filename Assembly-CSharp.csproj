@@ -53,32 +53,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BanhoCameraTextureRenderer.cs" />
-     <Compile Include="Assets\BoneDamages.cs" />
-     <Compile Include="Assets\CharacterSelectionOutro.cs" />
-     <Compile Include="Assets\ChuvaGenerator.cs" />
-     <Compile Include="Assets\ColisaoCaraleo.cs" />
-     <Compile Include="Assets\ControleClick.cs" />
-     <Compile Include="Assets\CutsceneIntro.cs" />
-     <Compile Include="Assets\EnemyMov.cs" />
-     <Compile Include="Assets\GotaDeleter.cs" />
-     <Compile Include="Assets\LogoMovimentacao.cs" />
-     <Compile Include="Assets\MaoBanho.cs" />
-     <Compile Include="Assets\Maomove.cs" />
-     <Compile Include="Assets\MeuNegocio.cs" />
-     <Compile Include="Assets\MovCand.cs" />
-     <Compile Include="Assets\MoveFight.cs" />
-     <Compile Include="Assets\MusicPreventCut.cs" />
-     <Compile Include="Assets\NoiseAnimation.cs" />
-     <Compile Include="Assets\PersonagemGarotinha.cs" />
-     <Compile Include="Assets\ResCanv.cs" />
-     <Compile Include="Assets\SabaoClickUI.cs" />
-     <Compile Include="Assets\SabaoQueCai.cs" />
-     <Compile Include="Assets\SelectionCharacter.cs" />
-     <Compile Include="Assets\SoapGenerator.cs" />
-     <Compile Include="Assets\TimerContador.cs" />
-     <Compile Include="Assets\TitleAudioStarter.cs" />
-     <Compile Include="Assets\TransitionScript.cs" />
+     <Compile Include="Assets\Scripts\Banho\BanhoCameraTextureRenderer.cs" />
+     <Compile Include="Assets\Scripts\Banho\ChuvaGenerator.cs" />
+     <Compile Include="Assets\Scripts\Banho\GotaDeleter.cs" />
+     <Compile Include="Assets\Scripts\Banho\MaoBanho.cs" />
+     <Compile Include="Assets\Scripts\Banho\Maomove.cs" />
+     <Compile Include="Assets\Scripts\Banho\SabaoClickUI.cs" />
+     <Compile Include="Assets\Scripts\Banho\SabaoQueCai.cs" />
+     <Compile Include="Assets\Scripts\Banho\SoapGenerator.cs" />
+     <Compile Include="Assets\Scripts\Character Selection\CharacterSelectionOutro.cs" />
+     <Compile Include="Assets\Scripts\Character Selection\SelectionCharacter.cs" />
+     <Compile Include="Assets\Scripts\ColisaoCaraleo.cs" />
+     <Compile Include="Assets\Scripts\Fight Minigame\EnemyMov.cs" />
+     <Compile Include="Assets\Scripts\Fight Minigame\MoveFight.cs" />
+     <Compile Include="Assets\Scripts\Fight Minigame\TimerContador.cs" />
+     <Compile Include="Assets\Scripts\Intro\CutsceneIntro.cs" />
+     <Compile Include="Assets\Scripts\Intro\LogoMovimentacao.cs" />
+     <Compile Include="Assets\Scripts\Intro\MusicPreventCut.cs" />
+     <Compile Include="Assets\Scripts\Intro\TitleAudioStarter.cs" />
+     <Compile Include="Assets\Scripts\Lava\CandelabroScript.cs" />
+     <Compile Include="Assets\Scripts\Lava\MovCand.cs" />
+     <Compile Include="Assets\Scripts\Lava\PersonagemGarotinha.cs" />
+     <Compile Include="Assets\Scripts\ResCanv.cs" />
+     <Compile Include="Assets\Scripts\TV Transition\ControleClick.cs" />
+     <Compile Include="Assets\Scripts\TV Transition\NoiseAnimation.cs" />
+     <Compile Include="Assets\Scripts\TV Transition\TransitionScript.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>E:/unity/Game Jaaj 3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

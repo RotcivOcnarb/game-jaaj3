@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 495909833}
   - component: {fileID: 495909829}
   - component: {fileID: 495909828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Personagem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,12 +226,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495909827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.887, y: 0.614, z: 0}
+  m_LocalPosition: {x: -5, y: -0.849, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0}
-  m_Children:
-  - {fileID: 1999488372}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &495909832
 MonoBehaviour:
@@ -250,6 +249,8 @@ MonoBehaviour:
   - {fileID: 1892805502}
   - {fileID: 1265336632}
   - {fileID: 1409879270}
+  mainCamera: {fileID: 698731503}
+  candelabro: {fileID: 1999488373}
 --- !u!95 &495909833
 Animator:
   serializedVersion: 3
@@ -280,7 +281,7 @@ GameObject:
   - component: {fileID: 558437946}
   - component: {fileID: 558437945}
   - component: {fileID: 558437944}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Parede
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +347,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &698731501
 GameObject:
@@ -406,7 +407,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 0f4778a6330cc954d8ce6ea375918243, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -520,7 +521,7 @@ GameObject:
   - component: {fileID: 1253540242}
   - component: {fileID: 1253540241}
   - component: {fileID: 1253540240}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Parede (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,7 +587,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1265336630
 GameObject:
@@ -600,7 +601,7 @@ GameObject:
   - component: {fileID: 1265336633}
   - component: {fileID: 1265336632}
   - component: {fileID: 1265336631}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tapete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -728,7 +729,7 @@ GameObject:
   - component: {fileID: 1332485003}
   - component: {fileID: 1332485002}
   - component: {fileID: 1332485001}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mezinha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -855,7 +856,7 @@ GameObject:
   - component: {fileID: 1409879271}
   - component: {fileID: 1409879270}
   - component: {fileID: 1409879269}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Chao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -921,7 +922,7 @@ Transform:
   m_LocalScale: {x: 1, y: 3.2337499, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1892805500
 GameObject:
@@ -935,7 +936,7 @@ GameObject:
   - component: {fileID: 1892805503}
   - component: {fileID: 1892805502}
   - component: {fileID: 1892805501}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Poltrona
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1061,7 +1062,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1999488372}
   - component: {fileID: 1999488371}
-  m_Layer: 0
+  - component: {fileID: 1999488373}
+  m_Layer: 10
   m_Name: Candelabro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1124,9 +1126,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999488370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -5.9370003, y: 7.08, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children: []
-  m_Father: {fileID: 495909831}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1999488373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999488370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c77aa273a484840a519f41ae71b891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  garotinha: {fileID: 495909832}
+  pecas:
+  - {fileID: 21300000, guid: eb10bae613fad3e41972158c05cd1a6a, type: 3}
+  - {fileID: 21300002, guid: eb10bae613fad3e41972158c05cd1a6a, type: 3}
+  - {fileID: 21300004, guid: eb10bae613fad3e41972158c05cd1a6a, type: 3}
+  - {fileID: 21300006, guid: eb10bae613fad3e41972158c05cd1a6a, type: 3}
+  - {fileID: 21300008, guid: eb10bae613fad3e41972158c05cd1a6a, type: 3}
+  - {fileID: 21300010, guid: eb10bae613fad3e41972158c05cd1a6a, type: 3}
+  - {fileID: 21300012, guid: eb10bae613fad3e41972158c05cd1a6a, type: 3}
+  - {fileID: 21300014, guid: eb10bae613fad3e41972158c05cd1a6a, type: 3}
+  - {fileID: 21300016, guid: eb10bae613fad3e41972158c05cd1a6a, type: 3}
+  - {fileID: 21300018, guid: eb10bae613fad3e41972158c05cd1a6a, type: 3}
